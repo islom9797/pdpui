@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pdpui/package/home_page.dart';
 import 'package:pdpui/package/pdpui.dart';
 
 void main() {
@@ -16,6 +17,10 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home:PdpUi(),
+      routes: {
+        PdpUi.id:(context)=>PdpUi(),
+        Register.id:(context)=>Register(),
+      },
     );
   }
 }
