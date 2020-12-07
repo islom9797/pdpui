@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:pdpui/main.dart';
 import 'package:flutter/material.dart';
 import 'package:pdpui/package/home_page.dart';
+import 'package:pdpui/package/shop_home.dart';
 class PdpUi extends StatefulWidget {
   static final String id="pdpui";
   @override
@@ -13,6 +14,19 @@ class _PdpUiState extends State<PdpUi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Icon(Icons.menu),
+        backgroundColor: Colors.red,
+        title: GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, ShopHome.id);
+          },
+          child: Center(
+            child: Text("Home"),
+          ),
+        ),
+        actions: [
+
+        ],
 
       ),
       body: Center(

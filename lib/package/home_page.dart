@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdpui/package/pdpui.dart';
+import 'package:pdpui/package/shop_home.dart';
 class Register extends StatefulWidget {
   static final String id="register";
   @override
@@ -10,6 +11,21 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: GestureDetector(
+          onTap: (){
+            Navigator.pushNamed(context, ShopHome.id);
+          },
+          child: Center(
+            child: Text("Home"),
+          ),
+        ),
+        actions: [
+
+        ],
+
+      ),
       body: Center(
 
         child: Container(
